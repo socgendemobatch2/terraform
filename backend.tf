@@ -1,8 +1,12 @@
 terraform {
   backend "azurerm" {
-    resource_group_name  = "tfstateRG"  # Can be passed via `-backend-config=`"resource_group_name=<resource group name>"` in the `init` command.
-    storage_account_name = "tfstatestgacc03092024"                      # Can be passed via `-backend-config=`"storage_account_name=<storage account name>"` in the `init` command.
-    container_name       = "tfstate"                       # Can be passed via `-backend-config=`"container_name=<container name>"` in the `init` command.
-    key                  = "terraform.tfstate"        # Can be passed via `-backend-config=`"key=<blob key name>"` in the `init` command.
+    resource_group_name  = "tfstateRG"  
+    storage_account_name = "tfstatestgacc03092024"                      
+    container_name       = "tfstate"
+    key                  = "terraform.tfstate" 
+    client_id       = "clientid"
+    client_secret   = "clientsecret"
+    tenant_id       = "tenantid"
+    subscription_id = "subscriptionid"
   }
 }
